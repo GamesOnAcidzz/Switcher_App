@@ -33,12 +33,12 @@ class RoomDetailsFragment(var roomName:String,var lightstate:Boolean) : Fragment
         if (lightstate)
         {
             binding.lightImageview.setImageDrawable(resources.getDrawable(R.drawable.light_on))
-            binding.lightStatusTextview.text = "ON"
+            binding.lightStatusTextview.text = resources.getString(R.string.light_on)
         }
         else
         {
             binding.lightImageview.setImageDrawable(resources.getDrawable(R.drawable.light_off))
-            binding.lightStatusTextview.text = "OFF"
+            binding.lightStatusTextview.text = resources.getString(R.string.light_off)
         }
         binding.backButton.setOnClickListener {
             activity?.onBackPressed()
